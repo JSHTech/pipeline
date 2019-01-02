@@ -6,8 +6,6 @@ stages {
                 echo 'Building..'
 				sh '''
 				       pwd
-				       echo 'pwd executed'
-				       ls -lrt build
 				       bash build
 				    '''
 				
@@ -16,13 +14,13 @@ stages {
         stage('deploy') {
             steps {
                 echo 'Deploying to TEST environment..'
-				sh 'sudo chmod 777 build deploy test; ./deploy'
+				sh 'bash deploy'
             }
         }
         stage('test') {
             steps {
                 echo 'Testing....'
-				sh 'sudo chmod 777 build deploy test; ./test'
+				sh 'bash test'
 					}
 				}
     }

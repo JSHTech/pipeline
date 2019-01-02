@@ -8,10 +8,7 @@ stages {
 				       pwd
 				       echo 'pwd executed'
 				       ls -lrt build
-				       sudo chmod 777 build
-				       echo 'chmod executed'
-				       ls -lrt build
-				       ./build
+				       bash build
 				    '''
 				
             }

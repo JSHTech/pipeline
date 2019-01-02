@@ -4,7 +4,11 @@ stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-				sh 'pwd; sudo chmod 777 build; ./build'
+				sh '''
+				       pwd
+				       sudo chmod 777 build
+				       ./build
+				    '''
 				
             }
         }
